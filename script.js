@@ -16,21 +16,17 @@ function convertToRoman(num) {
     ];
 
   //your code here
-let emty = "";
-    let i = 0;
-
-    while (num > 0) {
-        if (num >= arr[i][1]) {
-            emty += arr[i][0];
+ let roman = "";
+    
+    for (let i = 0; i < arr.length; i++) {
+        while (num >= arr[i][1]) {
+            roman += arr[i][0];
             num -= arr[i][1];
-        } else {
-            i++;
         }
     }
 
-    return emty;
-}
-
+    return roman;
+	
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
 // console.log(convertToRoman(36));
